@@ -1,7 +1,7 @@
 +++
 # About/Biography widget.
 
-date = "2016-04-20T00:00:00"
+date = "2017-09-14T00:00:00"
 draft = false
 
 widget = "about"
@@ -12,31 +12,30 @@ weight = 1
 # List your academic interests.
 [interests]
   interests = [
-    "Artificial Intelligence",
-    "Computational Linguistics",
-    "Information Retrieval"
+    "Urban Models and Simulation",
+    "Urban Science",
+    "Open Science"
   ]
 
 # List your qualifications (such as academic degrees).
 [[education.courses]]
-  course = "PhD in Artificial Intelligence"
+  course = "PhD, Urban Design and Planning"
   institution = "Stanford University"
-  year = 2012
-
-[[education.courses]]
-  course = "MEng in Artificial Intelligence"
-  institution = "Massachusetts Institute of Technology"
   year = 2009
 
 [[education.courses]]
-  course = "BSc in Artificial Intelligence"
-  institution = "Massachusetts Institute of Technology"
-  year = 2008
+  course = "MS, Landscape Ecology"
+  institution = "Chinese Academy of Forestry"
+  year = 2002
+
+[[education.courses]]
+  course = "BSc, Geography"
+  institution = "Beijing University"
+  year = 1999
  
 +++
 
 # Biography
 
-Lena Smith is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Dr. Wang's research takes a data-driven approach to address challenging issues in planning, in particular those intersecting land use and transportation. Relying on data analysis, simulation and visualization techniques, his research aims to inform policy makers and the public of the effects of infrastructure and policy choices on community outcomes such as accessibility, environment, and equity. 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate. 

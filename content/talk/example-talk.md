@@ -3,9 +3,9 @@ date = "2017-01-01T00:00:00"
 title = "Example Talk"
 abstract = ""
 abstract_short = ""
-event = "Hugo Academic Theme Conference"
+event = ""
 event_url = "https://example.org"
-location = "London, United Kingdom"
+location = ""
 
 selected = false
 math = true

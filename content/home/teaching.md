@@ -14,14 +14,10 @@ weight = 60
 
 +++
 
-This is an example of using the *custom* widget to create your own homepage section.
-
-I am a teaching instructor for the following courses at University X:
-
-- CS101: An intro to computer science
-- CS102: An intro to computer science
-- CS103: An intro to computer science
-- CS104: An intro to computer science
-- CS105: An intro to computer science
-- CS106: An intro to computer science
-- CS107: An intro to computer science
+- An Introduction to Data Science
+- USP414/514: Transportation Seminar
+- USP570: Transportation and Land Use
+- USP587: Travel Demand Modeling
+- USP657: Discrete Choice Modeling
+- USP634: Data Analysis I
+- USP654: Data Analysis II
