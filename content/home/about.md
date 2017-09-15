@@ -21,17 +21,17 @@ weight = 1
 # List your qualifications (such as academic degrees).
 [[education.courses]]
   course = "PhD, Urban Design and Planning"
-  institution = "Stanford University"
+  institution = "University of Washington, Seattle"
   year = 2009
 
 [[education.courses]]
   course = "MS, Landscape Ecology"
-  institution = "Chinese Academy of Forestry"
+  institution = "Chinese Academy of Forestry, Beijing, China"
   year = 2002
 
 [[education.courses]]
   course = "BSc, Geography"
-  institution = "Beijing University"
+  institution = "Beijing University, Beijing, China"
   year = 1999
  
 +++
