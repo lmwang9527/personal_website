@@ -1,6 +1,6 @@
 baseurl = "https://lmwang9527.github.io/"  # End your URL with a `/` trailing slash.
 title = "Liming Wang"
-copyright = "&copy; 2016 Your Name"
+copyright = "&copy; 2017 Liming Wang"
 theme = "hugo-academic"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
