@@ -9,12 +9,12 @@ publication = "Housing Studies"
 publication_short = ""
 selected = true
 title = "Housing location choices of the poor: does access to jobs matter?"
-url_code = "#"
-url_dataset = "#"
+url_code = ""
+url_dataset = ""
 url_pdf = "http://www.tandfonline.com/doi/abs/10.1080/02673037.2017.1364354"
 url_project = "project/housing-choice/"
-url_slides = "#"
-url_video = "#"
+url_slides = ""
+url_video = ""
 
 [[url_custom]]
 name = "Custom Link"
