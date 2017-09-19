@@ -13,9 +13,7 @@ weight = 1
 [interests]
   interests = [
     "Urban Modeling and Simulation",
-    "Urban Science",
-    "Data Science", 
-    "Open Science"
+    "Urban Data Science"
   ]
 
 # List your qualifications (such as academic degrees).

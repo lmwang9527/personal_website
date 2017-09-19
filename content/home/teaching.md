@@ -14,10 +14,10 @@ weight = 60
 
 +++
 
-- An Introduction to Data Science
+- [An Introduction to Data Science](https://cities.github.io/datascience2017)
 - USP414/514: Transportation Seminar
 - USP570: Transportation and Land Use
 - USP587: Travel Demand Modeling
 - USP657: Discrete Choice Modeling
-- USP634: Data Analysis I
+- [USP634: Data Analysis I](https://usp634.github.io)
 - USP654: Data Analysis II
