@@ -4,7 +4,7 @@ authors = ["Lingqian Hu", "Liming Wang"]
 date = "2017-08-30"
 image_preview = ""
 math = true
-publication_types = ["1"]
+publication_types = ["2"]
 publication = "Housing Studies"
 publication_short = ""
 selected = true
@@ -12,13 +12,9 @@ title = "Housing location choices of the poor: does access to jobs matter?"
 url_code = ""
 url_dataset = ""
 url_pdf = "http://www.tandfonline.com/doi/abs/10.1080/02673037.2017.1364354"
-url_project = "project/housing-choice/"
+url_project = ""
 url_slides = ""
 url_video = ""
-
-[[url_custom]]
-name = "Custom Link"
-url = "http://www.example.org"
 
 # Optional featured image (relative to `static/img/` folder).
 [header]
@@ -26,5 +22,3 @@ image = "headers/bubbles-wide.jpg"
 caption = "My caption :smile:"
 
 +++
-
-More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code.

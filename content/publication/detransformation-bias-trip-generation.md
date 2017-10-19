@@ -12,10 +12,11 @@ title = "De-Transformation Bias in Non-linear Trip Generation Models"
 url_code = ""
 url_dataset = ""
 url_pdf = ""
-url_project = "project/urban-models/"
+url_project = ""
 url_slides = ""
 url_video = ""
-
+url_poster = ""
+url_preprint = ""
+url_source = ""
 +++
 
-More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code.

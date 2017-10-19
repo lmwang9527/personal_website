@@ -1,17 +1,18 @@
 +++
 # About/Biography widget.
 
-date = "2017-09-14T00:00:00"
+date = "2017-10-18T00:00:00"
 draft = false
 
 widget = "about"
 
 # Order that this section will appear in.
-weight = 1
+weight = 5
 
 # List your academic interests.
 [interests]
   interests = [
+    "Land Use Transportation Interaction Models",
     "Urban Modeling and Simulation",
     "Urban Data Science"
   ]
