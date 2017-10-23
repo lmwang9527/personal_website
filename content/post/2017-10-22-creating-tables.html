@@ -1,0 +1,68 @@
+---
+title: "Creating Tables for Microsoft Word output with R Markdown (as of 2017/10)"
+date: 2017-10-22
+categories: ["R", "Reproducible Research"]
+tags: ["R Markdown", "Word", "table", "regression"]
+---
+
+
+
+<div id="r-markdown" class="section level1">
+<h1>R Markdown</h1>
+<p>I have switched to solely use R Markdown for the <code>communication</code> step of my tidy work flow and found it pleasant and actually prodocutive to use. However, there is one major hurdle: output to Word format. In a perfect world, I would never need to use any Microsoft products ever again. In reality when I need to work with collaborators that do not use RMarkdown and funders that require reports in Word format (with a required style template), there is no other options. As a matter of fact, the only viable solution working with anybody that doesn’t use RMarkdown and/or <code>git</code> is still MS Word as of 2017/10.</p>
+<p>Rendering R Markdown file to word_document works for the most part, except for sophisticated tables, which, unfortunately, are prevalent in most of my work.</p>
+</div>
+<div id="possible-solutions" class="section level1">
+<h1>Possible Solutions</h1>
+<p>There are a few possible solutions, none of them good enough for me at this point:</p>
+<ol style="list-style-type: decimal">
+<li>Gmisc::docx_document (the output is a html file with an additional <code>css</code> file; no support for Word style template);</li>
+<li>Convert html output to Word document through <code>soffice</code> (the output is very basic; no support for template);</li>
+<li>Pure R solution <code>officer</code> + <code>flextable</code> (They can generate pure good Word output, but they do not work with R Markdown).</li>
+</ol>
+</div>
+<div id="my-solutionhack-as-of-201710" class="section level1">
+<h1>My solution/hack (as of 2017/10)</h1>
+<ol style="list-style-type: decimal">
+<li>Render Rmd file with output set to rmarkdown::word_document;</li>
+<li>The Rmd file uses texreg/htmlreg to generate html tables for regression results and saves them into separate html files (one for each table) during rendering;</li>
+<li>Convert html to docx:
+<ol style="list-style-type: lower-alpha">
+<li>Via Word COM through py32win module (the used option)</li>
+<li>Via <a href="https://github.com/evidenceprime/html-docx-js">docx-html-js</a></li>
+<li>Via soffice: <code>soffice --headless --convert-to docx:&quot;MS Word 2007 XML&quot; --writer --outdir . Table\ 1.html</code></li>
+</ol></li>
+<li>Patch the rendered word_document and replace placeholder tables with actual tables</li>
+</ol>
+<div id="steps-and-files" class="section level2">
+<h2>Steps and Files:</h2>
+<ol style="list-style-type: decimal">
+<li><code>rmarkdown::render(&quot;reg_tables_demo.Rmd&quot;)</code></li>
+<li><code>python.exe html2docx.py tabs/</code> (requires py32win and Microsoft Word on Windows PC, tested with MS Office 2016 and python 2.7)</li>
+<li><code>source(&quot;patch_docx_tables.R&quot;) &amp;&amp; patchFlexTables(&quot;reg_tables_demo.docx&quot;, &quot;tabs/&quot;, &quot;reg_tables_demo_final.docx&quot;)</code></li>
+<li>Final <a href="reg_tables_demo_final.docx">reg_tables_demo.docx</a></li>
+</ol>
+<p>Files can be founded on github: <a href="https://github.com/cities-lab/rmd-docx" class="uri">https://github.com/cities-lab/rmd-docx</a></p>
+</div>
+</div>
+<div id="alternativesthings-to-watch-out" class="section level1">
+<h1>Alternatives/Things to watch out</h1>
+<ol style="list-style-type: decimal">
+<li><p><code>broom</code> &gt; <code>huxtable</code> &gt; <code>flextable</code> &gt; <code>pandoc (2.0)</code></p>
+<p>This solution directly <code>knitr::knit</code> Rmd files into Word documents embedding flextables through xml chunks. It eliminates the need to run scripts outside <code>knit</code> and is a much more elegant solution than my solution above. However it is not yet an acceptable solution at the moment for a number of reasons:</p>
+<ol style="list-style-type: lower-roman">
+<li><code>pandoc</code> 2.0 is not yet released. Users will need to build their own <code>pandoc</code> installation from source.</li>
+<li>The <code>flextable</code> implementation, standing as <a href="https://gist.github.com/mnazarov/75c2c21048e8aca9bc5acb27e0234d85">a proposal by Maxim Nazarov</a>, is yet to be incorporated in <code>flextable</code>’s code base, although Maxim’s code should work already.</li>
+<li><code>broom</code> supports <a href="https://github.com/tidyverse/broom">a small set of model objects</a> than <a href="https://cran.r-project.org/web/packages/texreg/vignettes/texreg.pdf"><code>texreg</code></a>, although <code>broom</code> + <code>huxtable</code> seem to be a better solution in the long run given they follow the tidy philosophy and <code>broom</code> is now part of <code>tidyverse</code>.</li>
+</ol></li>
+<li><p><code>pandoc</code>, when it improves its support for sophisticated tables in unknown future</p>
+<p>The table support currently in <code>pandoc</code> is rudimentary, in particular, <a href="https://github.com/jgm/pandoc/issues/1024">no support for table row/column spans</a>, which is what sent me down this rabbit hole. Once the issue is resolved, it’d be as easy and functional to produce Word outputs as html and pdf ones. Not sure when this would be resolved (if ever), as the github issue has been open for 4 years now.</p></li>
+</ol>
+</div>
+<div id="credits" class="section level1">
+<h1>Credits</h1>
+<ol style="list-style-type: decimal">
+<li><a href="https://github.com/davidgohel/ReporteRs/issues/68">Carsten Behring</a> for coming out with the idea and sharing his code for the hack;</li>
+<li><a href="http://gforge.se/2014/07/fast-track-publishing-using-rmarkdown/">Max Gordon</a></li>
+</ol>
+</div>
