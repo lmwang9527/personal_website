@@ -35,8 +35,8 @@ There are a few possible solutions, none of them good enough for me at this poin
 ## Steps and Files:
 1. `rmarkdown::render("reg_tables_demo.Rmd")`
 1. `python.exe html2docx.py tabs/` (requires py32win and Microsoft Word on Windows PC, tested with MS Office 2016 and python 2.7)
-1. `source("patch_docx_tables.R") && patchFlexTables("reg_tables_demo.docx", "tabs/", "reg_tables_demo_final.docx")`
-1. Final [reg_tables_demo.docx](reg_tables_demo_final.docx)
+1. `source("patch_docx_tables.R"); patchFlexTables("reg_tables_demo.docx", "tabs/", "reg_tables_demo_final.docx")`
+1. Final [reg_tables_demo.docx](https://github.com/cities-lab/rmd-docx/blob/master/reg_tables_demo_final.docx?raw=true)
 
 Files can be founded on github: https://github.com/cities-lab/rmd-docx
 
