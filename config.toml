@@ -46,7 +46,7 @@ defaultContentLanguageInSubdir = false
   organizations = [ { name = "Portland State University", url = "https://pdx.edu/usp" } ]
   
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
-  avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
+  avatar = "lmwang_profile.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
   email = "lmwang+web@gmail.com"
   address = "506 SW Mill St, Portland, OR 97207"
   office_hours = "email for appointment"
