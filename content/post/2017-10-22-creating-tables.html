@@ -1,5 +1,5 @@
 ---
-title: "Creating Tables for Microsoft Word output with R Markdown (as of 2017/10)"
+title: "Creating Tables for Microsoft Word output with R Markdown"
 date: 2017-10-22
 categories: ["R", "Reproducible Research"]
 tags: ["R Markdown", "Word", "table", "regression"]
@@ -18,7 +18,7 @@ tags: ["R Markdown", "Word", "table", "regression"]
 <ol style="list-style-type: decimal">
 <li>Gmisc::docx_document (the output is a html file with an additional <code>css</code> file; no support for Word style template);</li>
 <li>Convert html output to Word document through <code>soffice</code> (the output is very basic; no support for template);</li>
-<li>Pure R solution <code>officer</code> + <code>flextable</code> (They can generate pure good Word output, but they do not work with R Markdown).</li>
+<li>Pure R solution <code>officer</code> + <code>flextable</code> (They can generate good looking Word output, but they do not work with R Markdown yet (see below)).</li>
 </ol>
 </div>
 <div id="my-solutionhack-as-of-201710" class="section level1">
@@ -42,7 +42,7 @@ tags: ["R Markdown", "Word", "table", "regression"]
 <li><code>source(&quot;patch_docx_tables.R&quot;); patchFlexTables(&quot;reg_tables_demo.docx&quot;, &quot;tabs/&quot;, &quot;reg_tables_demo_final.docx&quot;)</code></li>
 <li>Final <a href="https://github.com/cities-lab/rmd-docx/blob/master/reg_tables_demo_final.docx?raw=true">reg_tables_demo.docx</a></li>
 </ol>
-<p>Files can be founded on github: <a href="https://github.com/cities-lab/rmd-docx" class="uri">https://github.com/cities-lab/rmd-docx</a></p>
+<p>All files/scripts used can be founded on github: <a href="https://github.com/cities-lab/rmd-docx" class="uri">https://github.com/cities-lab/rmd-docx</a></p>
 </div>
 </div>
 <div id="alternativesthings-to-watch-out" class="section level1">

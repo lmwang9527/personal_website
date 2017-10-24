@@ -1,5 +1,5 @@
 ---
-title: "Creating Tables for Microsoft Word output with R Markdown (as of 2017/10)"
+title: "Creating Tables for Microsoft Word output with R Markdown"
 date: 2017-10-22
 categories: ["R", "Reproducible Research"]
 tags: ["R Markdown", "Word", "table", "regression"]
@@ -21,7 +21,7 @@ There are a few possible solutions, none of them good enough for me at this poin
 
 1. Gmisc::docx_document (the output is a html file with an additional `css` file; no support for Word style template);
 1. Convert html output to Word document through `soffice` (the output is very basic; no support for template);
-1. Pure R solution `officer` + `flextable` (They can generate pure good Word output, but they do not work with R Markdown).
+1. Pure R solution `officer` + `flextable` (They can generate good looking Word output, but they do not work with R Markdown yet (see below)).
 
 # My solution/hack (as of 2017/10)
 1. Render Rmd file with output set to rmarkdown::word_document;
@@ -38,7 +38,7 @@ There are a few possible solutions, none of them good enough for me at this poin
 1. `source("patch_docx_tables.R"); patchFlexTables("reg_tables_demo.docx", "tabs/", "reg_tables_demo_final.docx")`
 1. Final [reg_tables_demo.docx](https://github.com/cities-lab/rmd-docx/blob/master/reg_tables_demo_final.docx?raw=true)
 
-Files can be founded on github: https://github.com/cities-lab/rmd-docx
+All files/scripts used can be founded on github: https://github.com/cities-lab/rmd-docx
 
 # Alternatives/Things to watch out
 
