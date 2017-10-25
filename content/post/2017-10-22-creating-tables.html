@@ -9,7 +9,7 @@ tags: ["R Markdown", "Word", "table", "regression"]
 
 <div id="r-markdown" class="section level1">
 <h1>R Markdown</h1>
-<p>I have switched to solely use R Markdown for the <code>communication</code> step of my tidy work flow and found it pleasant and actually prodocutive to use. However, there is one major hurdle: output to Word format. In a perfect world, I would never need to use any Microsoft products ever again. In reality when I need to work with collaborators that do not use RMarkdown and funders that require reports in Word format (with a required style template), there is no other options. As a matter of fact, the only viable solution working with anybody that doesn’t use RMarkdown and/or <code>git</code> is still MS Word as of 2017/10.</p>
+<p>I have switched to solely use R Markdown for the <code>communication</code> step of my <a href="http://r4ds.had.co.nz/introduction.html">tidy work flow</a> and found it pleasant and actually prodocutive to use. However, there is one major hassle: output in Word format. In a perfect world, I would never need to use any Microsoft products ever again. In reality when I need to work with collaborators that do not use RMarkdown and funders of research projects that require reports in Word format (and a required style template), there are no other options. As a matter of fact, it seems that the only viable solution collaborating with anybody that doesn’t use RMarkdown and/or <code>git</code> is still MS Word as of 2017/10.</p>
 <p>Rendering R Markdown file to word_document works for the most part, except for sophisticated tables, which, unfortunately, are prevalent in most of my work.</p>
 </div>
 <div id="possible-solutions" class="section level1">
@@ -38,15 +38,15 @@ tags: ["R Markdown", "Word", "table", "regression"]
 <h2>Steps and Files:</h2>
 <ol style="list-style-type: decimal">
 <li><code>rmarkdown::render(&quot;reg_tables_demo.Rmd&quot;)</code></li>
-<li><code>python.exe html2docx.py tabs/</code> (requires py32win and Microsoft Word on Windows PC, tested with MS Office 2016 and python 2.7)</li>
+<li><code>python html2docx.py tabs/</code> (requiring py32win and Microsoft Word on a Windows PC, tested with MS Office 2016 and python 2.7)</li>
 <li><code>source(&quot;patch_docx_tables.R&quot;); patchFlexTables(&quot;reg_tables_demo.docx&quot;, &quot;tabs/&quot;, &quot;reg_tables_demo_final.docx&quot;)</code></li>
 <li>Final <a href="https://github.com/cities-lab/rmd-docx/blob/master/reg_tables_demo_final.docx?raw=true">reg_tables_demo.docx</a></li>
 </ol>
 <p>All files/scripts used can be founded on github: <a href="https://github.com/cities-lab/rmd-docx" class="uri">https://github.com/cities-lab/rmd-docx</a></p>
 </div>
 </div>
-<div id="alternativesthings-to-watch-out" class="section level1">
-<h1>Alternatives/Things to watch out</h1>
+<div id="alternatives-things-to-keep-an-eye-on" class="section level1">
+<h1>Alternatives / Things to keep an eye on</h1>
 <ol style="list-style-type: decimal">
 <li><p><code>broom</code> &gt; <code>huxtable</code> &gt; <code>flextable</code> &gt; <code>pandoc (2.0)</code></p>
 <p>This solution directly <code>knitr::knit</code> Rmd files into Word documents embedding flextables through xml chunks. It eliminates the need to run scripts outside <code>knit</code> and is a much more elegant solution than my solution above. However it is not yet an acceptable solution at the moment for a number of reasons:</p>
@@ -62,7 +62,7 @@ tags: ["R Markdown", "Word", "table", "regression"]
 <div id="credits" class="section level1">
 <h1>Credits</h1>
 <ol style="list-style-type: decimal">
-<li><a href="https://github.com/davidgohel/ReporteRs/issues/68">Carsten Behring</a> for coming out with the idea and sharing his code for the hack;</li>
+<li><a href="https://github.com/davidgohel/ReporteRs/issues/68">Carsten Behring</a> for coming out with the idea and sharing his code for the Word patching hack;</li>
 <li><a href="http://gforge.se/2014/07/fast-track-publishing-using-rmarkdown/">Max Gordon</a></li>
 </ol>
 </div>

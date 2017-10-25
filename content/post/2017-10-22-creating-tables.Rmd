@@ -11,9 +11,9 @@ knitr::opts_chunk$set(collapse = TRUE)
 
 # R Markdown
 
-I have switched to solely use R Markdown for the `communication` step of my tidy work flow and found it pleasant and actually prodocutive to use. However, there is one major hurdle: output to Word format. In a perfect world, I would never need to use any Microsoft products ever again. In reality when I need to work with collaborators that do not use RMarkdown and funders that require reports in Word format (with a required style template), there is no other options. As a matter of fact, the only viable solution working with anybody that doesn't use RMarkdown and/or `git` is still MS Word as of 2017/10.
+I have switched to solely use R Markdown for the `communication` step of my [tidy work flow](http://r4ds.had.co.nz/introduction.html) and found it pleasant and actually prodocutive to use. However, there is one major hassle: output in Word format. In a perfect world, I would never need to use any Microsoft products ever again. In reality when I need to work with collaborators that do not use RMarkdown and funders of research projects that require reports in Word format (and a required style template), there are no other options. As a matter of fact, it seems that the only viable solution collaborating with anybody that doesn't use RMarkdown and/or `git` is still MS Word as of 2017/10.
 
-Rendering R Markdown file to word_document works for the most part, except for sophisticated tables, which, unfortunately, are prevalent in  most of my work.
+Rendering R Markdown file to word_document works for the most part, except for sophisticated tables, which, unfortunately, are prevalent in most of my work.
 
 # Possible Solutions
 
@@ -34,13 +34,13 @@ There are a few possible solutions, none of them good enough for me at this poin
 
 ## Steps and Files:
 1. `rmarkdown::render("reg_tables_demo.Rmd")`
-1. `python.exe html2docx.py tabs/` (requires py32win and Microsoft Word on Windows PC, tested with MS Office 2016 and python 2.7)
+1. `python html2docx.py tabs/` (requiring py32win and Microsoft Word on a Windows PC, tested with MS Office 2016 and python 2.7)
 1. `source("patch_docx_tables.R"); patchFlexTables("reg_tables_demo.docx", "tabs/", "reg_tables_demo_final.docx")`
 1. Final [reg_tables_demo.docx](https://github.com/cities-lab/rmd-docx/blob/master/reg_tables_demo_final.docx?raw=true)
 
 All files/scripts used can be founded on github: https://github.com/cities-lab/rmd-docx
 
-# Alternatives/Things to watch out
+# Alternatives / Things to keep an eye on
 
 1. `broom` > `huxtable` > `flextable` > `pandoc (2.0)`
 
@@ -55,6 +55,6 @@ All files/scripts used can be founded on github: https://github.com/cities-lab/r
     The table support currently in `pandoc` is rudimentary, in particular, [no support for table row/column spans](https://github.com/jgm/pandoc/issues/1024), which is what sent me down this rabbit hole. Once the issue is resolved, it'd be as easy and functional to produce Word outputs as html and pdf ones. Not sure when this would be resolved (if ever), as the github issue has been open for 4 years now.
 
 # Credits
-1. [Carsten Behring](https://github.com/davidgohel/ReporteRs/issues/68) for coming out with the idea and sharing his code for the hack;
+1. [Carsten Behring](https://github.com/davidgohel/ReporteRs/issues/68) for coming out with the idea and sharing his code for the Word patching hack;
 1. [Max Gordon](http://gforge.se/2014/07/fast-track-publishing-using-rmarkdown/)
     
