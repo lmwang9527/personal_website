@@ -1,6 +1,6 @@
 baseurl = "/"
 title = "Liming Wang"
-copyright = "&copy; 2017 Liming Wang"
+copyright = "&copy; 2017-18 Liming Wang"
 theme = "academic"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"

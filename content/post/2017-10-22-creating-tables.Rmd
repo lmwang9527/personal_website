@@ -20,7 +20,7 @@ Rendering R Markdown file to word_document works for the most part, except for s
 There are a few possible solutions, none of them good enough for me at this point:
 
 1. Gmisc::docx_document (the output is a html file with an additional `css` file; no support for Word style template);
-1. Convert html output to Word document through `soffice` (the output is very basic; no support for template);
+1. Convert html output to Word document through `soffice` (Tables in the output do not resemble the html input; some support for template);
 1. Pure R solution `officer` + `flextable` (They can generate good looking Word output, but they do not work with R Markdown yet (see below)).
 
 # My solution/hack (as of 2017/10)

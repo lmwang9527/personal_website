@@ -17,7 +17,7 @@ tags: ["R Markdown", "Word", "table", "regression"]
 <p>There are a few possible solutions, none of them good enough for me at this point:</p>
 <ol style="list-style-type: decimal">
 <li>Gmisc::docx_document (the output is a html file with an additional <code>css</code> file; no support for Word style template);</li>
-<li>Convert html output to Word document through <code>soffice</code> (the output is very basic; no support for template);</li>
+<li>Convert html output to Word document through <code>soffice</code> (Tables in the output do not resemble the html input; some support for template);</li>
 <li>Pure R solution <code>officer</code> + <code>flextable</code> (They can generate good looking Word output, but they do not work with R Markdown yet (see below)).</li>
 </ol>
 </div>
